@@ -12,7 +12,7 @@
         />
 
         <q-toolbar-title>
-          Quasar App
+          <q-btn to="/" label="Vue Study" class="text=subtitle1" unelevated></q-btn>
         </q-toolbar-title>
 
         <div>Quasar v{{ $q.version }}</div>
@@ -50,6 +50,12 @@ import { defineComponent, ref } from 'vue'
 import EssentialLink from 'components/EssentialLink.vue'
 
 const linksList = [
+  {
+    title: 'Vue 기초 문법',
+    caption: 'Vue 핵심가이드',
+    icon: 'school',
+    link: '/vue'
+  },
   {
     title: 'Docs',
     caption: 'quasar.dev',
