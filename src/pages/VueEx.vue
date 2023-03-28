@@ -38,9 +38,9 @@
     <q-card-section :id="`list-${id}`"> list-{{id}}</q-card-section>
     <q-separator />
 
-    <!--<q-card-section class="text-h6">
-      {{ calculateDate() }}
-    </q-card-section>-->
+    <q-card-section class="text-h6">
+      {{ calculateDate }}
+    </q-card-section>
 
     <q-separator />
     <q-card-section v-if="!seen"> Now you see me </q-card-section>
@@ -55,11 +55,20 @@
     <q-card-section v-else-if="type === 'C'"> C </q-card-section>
     <q-card-section v-else> Not A/B/C </q-card-section>
     <q-separator />
+    <q-card-section>책을 가지고 있다: {{ publishedBookMessage }}</q-card-section>
+	  <q-separator />
+
+    <q-card-section class="text-h6">
+    {{ toTitleDate }}
+    {{ calculateDate() }}
+  </q-card-section>
+	<q-separator />
 
 </template>
 
 <script>
   export default {
+    title: "Vue Basic",
     name: 'VueEx',
     components:{},
     data(){
@@ -82,12 +91,24 @@
         awesome: true,
         type: '9',
 
+        author: {
+          name: 'John Doe',
+          books: [
+            'Vue 2 - Advanced Guide',
+            'Vue 3 - Basic Guide',
+            'Vue 4 - The Mystery'
+          ]
+        },
+
       }
 
     },
-    computed:{
-
+    computed: {
+      publishedBookMessage(){
+        return this.author.books.length > 0 ? 'yes' : 'no'
+      }
     },
+
     watch:{
 
     },
@@ -101,7 +122,11 @@
       return formattedString;
 		  },
     },
-    title: "Vue Basic",
+
+
+
+
+
   }
 </script>
 
