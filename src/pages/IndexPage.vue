@@ -9,9 +9,11 @@
 </template>
 
 <script>
+
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'IndexPage'
+  name: 'IndexPage',
+  title: 'Vue를 재미있게 공부해 봅시다.'
 })
 </script>
