@@ -58,10 +58,23 @@ const linksList = [
   },
   {
     title: 'Shopping List',
-    caption: 'vue 실습 1',
+    caption: 'vue component 실습',
     icon: 'code',
     link: '/shop'
-  }
+  },
+  {
+    title: 'todo',
+    caption: 'vue + store 실습',
+    icon: 'home',
+    link: '/todo'
+  },
+  {
+    title: "db todo list",
+    caption: 'vue + database',
+    icon: "chat",
+    link: "/dbtodo",
+  },
+
 
   // {
   //   title: 'Docs',
